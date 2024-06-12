@@ -115,4 +115,5 @@ $quantidade = 3;
 
 $total_carrinho = $preco_produto * $quantidade;
 echo "Total da compra: R$ $total_carrinho <br>";
+
 ?>
