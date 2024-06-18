@@ -8,9 +8,11 @@
 6 - Utilize a função array_serach() para econtrar a posicao do dia "Sábado" no array e exiba o resultado.*/
 
 // 1
+echo "<br>";
 $dias_semana = array ("Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo");
 echo "O terceiro dia da semana é: " . $dias_semana[2] . "<br>";
 
+echo "<br>";
 echo "<hr>";
 
 // 2
@@ -20,13 +22,16 @@ $meses = array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Jul
 print_r($meses);
 
 echo "<br>";
+echo "<br>";
 
 $meses[11] = "Onzembro";
 print_r($meses);
 
+echo "<br>";
 echo "<hr>"; 
 
 // 3
+echo "<br>";
 $numeros = array();
 $numeros = [1, 2, 3, 4, 5];
 $numeros[] = 6;
@@ -36,6 +41,7 @@ echo "<br>";
 echo "<hr>";
 
 // 4
+echo "<br>";
 echo "Meses do ano: <br>";
 foreach($meses as $mes) {
     echo $mes . " , ";
@@ -45,12 +51,14 @@ echo "<br>";
 echo "<hr>";
 
 // 5
+echo "<br>";
 echo "Número de elementos no array de dias da semana é: " . count($dias_semana) . "<br>"; 
 
 echo "<br>";
 echo "<hr>";
 
 // 6
+echo "<br>";
 echo "A posição do dia 'Sábado' é: " . array_search("Sábado", $dias_semana) . "<br>";
 
 ?>
