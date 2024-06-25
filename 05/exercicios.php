@@ -70,7 +70,18 @@ while($contador <= 10) {
 */
 
 // Solução com for
-    for ()
+$n=$_GET['number'];
+$ultimo=1;
+$penultimo=0;
+  
+echo "0<br />1<br />";
+for($count=1 ; $count<=$n-2 ; $count++){
+ $atual = $ultimo + $penultimo;
+ echo $atual."<br />";
+ 
+ $penultimo = $ultimo;
+ $ultimo = $atual;
+}
 
 // Solução com while
 
@@ -87,7 +98,7 @@ $A = 5;
 $B = 10;
 $C = 15;
 
-if ()
+// if ()
 
 
 // Atividade 2: Calcular o quadrado de um número
