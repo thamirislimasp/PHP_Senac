@@ -7,36 +7,45 @@
     Crie um programa que solicite ao usuário um número inteiro positivo N e realize uma contagem regressiva até zero.
     Após cada contagem, exiba a mensagem "Falta X segundos" onde X representa o número de segundos restantes para chegar a zero.
 */
-$numero = 5; //Número fornecido pelo usuário.
-echo "Contagem Regressiva <br>";
+
+    $numero = 5; //Número fornecido pelo usuário.
+    echo "CONTAGEM REGRESSIVA <br>";
+    echo "<br>";
 
 // Solução com for
-echo "Contagem usando o FOR <br>";
-for ($i = 5; $i > 0; $i = $i-1) {
-    echo "Número $i <br>";
-}
-echo "<br>";
+    echo "Contagem usando o FOR <br>";
+    echo "<br>";
+
+    for($i = $numero; $i >= 0; $i--) {
+        echo "Faltam $i segundos <br>";
+    }
+    echo "<br>";
+    echo "<br>";
 
 // Solução com while
-echo "Contagem usando o WHILE <br>";
-$contador = 5;
+    echo "Contagem usando o WHILE <br>";
+    echo "<br>";
 
-while($contador > 0) {
-    echo "Número $contador <br>";
-    $contador--;
-}
-echo "<br>";
+    $i = $numero;
+    while($i >= 0) {
+        echo "Faltam $i segundos <br>";
+        $i--;
+    }
+    echo "<br>";
+    echo "<br>";
 
 // Solução com do-while
-echo "Contagem usando o DO-WHILE <br>";
-$cont_do = 5;
+    echo "Contagem usando o DO-WHILE <br>";
+    echo "<br>";
 
-do {
-    echo "Número $cont_do <br>";
-    $cont_do--;
-} while ($cont_do >= 1);
+    $i = $numero;
+    do {
+        echo "Faltam $i segundos <br>";
+        $i--;
+    } while ($i >= 0);
 
-echo "<hr>";
+    echo "<br>";
+    echo "<hr>";
 
 
 // Desafio 2: Tabuada
@@ -44,48 +53,87 @@ echo "<hr>";
     Crie um programa que exiba a tabuada de multiplicação de um número fornecido pelo usuário.
     A tabuada deve ser exibida de 1 até 10.
 */
+    echo "TABUADA <br>";
+    echo "<br>";
 
-$tabuada_numero = 8;
+    $tabuada_numero = 8;
 
 // Solução com o FOR
+    echo "Usando o FOR <br>";
+    echo "<br>";
 
-    // for ($num = 1; $num <= 10; $num = $num++) {
-    //     echo $tabuada_numero . " x " . $num . " = " . ($tabuada_numero*$num) . "<br />";
+    for ($num = 1; $num <= 10; $num++) {
+        echo $tabuada_numero . " x " . $num . " = " . ($tabuada_numero*$num) . "<br>";
 
-    // }
-    // (????? Não deu certo)
+    }
+    
+    echo "<br>";
 
 // Solução com while
+    echo "Usando o WHILE <br>";
+    echo "<br>";
 
-while($contador <= 10) {
-    echo $tabuada_numero . " x " . $contador . " = " . ($tabuada_numero*$contador) . "<br />";
-    $contador++;
-}
+    $contador = 1;
 
+    while($contador <= 10) {
+        echo $tabuada_numero . " x " . $contador . " = " . ($tabuada_numero*$contador) . "<br>";
+        $contador++;
+    }
+
+    echo "<br>";
+    echo "<hr>";
+    
 
 // Desafio 3: Sequência Fibonacci
 /*
     A sequência de Fibonacci é uma sequência de números inteiros em que cada termo é a soma dos dois anteriores.
     Crie um programa que solicite ao usuário um número N e exiba os N primeiros termos da sequência de Fibonacci.
 */
+    echo "SEQUÊNCIA FIBONACCI <br>";
+    echo "<br>";    
 
 // Solução com for
-$n=$_GET['number'];
-$ultimo=1;
-$penultimo=0;
-  
-echo "0<br />1<br />";
-for($count=1 ; $count<=$n-2 ; $count++){
- $atual = $ultimo + $penultimo;
- echo $atual."<br />";
- 
- $penultimo = $ultimo;
- $ultimo = $atual;
-}
+    echo "Usando o FOR <br>";
+    echo "<br>";
+
+    $anterior = 0;
+    $atual = 1;
+    $termos = 10;
+
+    echo "$anterior $atual ";
+
+    for($i = 2; $i <= $termos; $i++) {
+        $proximo = $anterior + $atual;
+        echo "$proximo ";
+        $anterior = $atual;
+        $atual = $proximo;
+    }
+
+    echo "<br>";
+    echo "<br>";
 
 // Solução com while
+    echo "Usando o WHILE <br>";
+    echo "<br>";
 
+    $anterior = 0;
+    $atual = 1;
+    $termos = 10;
 
+    $i = 2; 
+
+    echo "$anterior $atual ";
+    while($i <= $termos) {
+        $proximo = $anterior + $atual;
+        echo "$proximo ";
+        $anterior = $atual;
+        $atual = $proximo;
+        $i++;
+    }
+
+    echo "<br>";
+    echo "<br>";
+    echo "<hr>";
 
 
 //// DESAFIOS LÓGICOS - ESTRUTURAS DE REPETIÇÃO
@@ -94,11 +142,23 @@ for($count=1 ; $count<=$n-2 ; $count++){
 /*
     Solicita três números inteiros ao usuário (A, B e C) e verifica se a soma de A e B é igual a C.
 */
-$A = 5;
-$B = 10;
-$C = 15;
+    echo "<br>";
 
-// if ()
+    $A = 5;
+    $B = 10;
+    $C = 15;
+
+    $resultado = $A + $B;
+
+    if($resultado == $C) {
+        echo "A soma de A e B é igual a C <br>";
+    } else {
+        echo "A soma de A e B é diferente de C <br>";
+    }
+
+    echo "<br>";
+    echo "<br>";
+    echo "<hr>";
 
 
 // Atividade 2: Calcular o quadrado de um número
