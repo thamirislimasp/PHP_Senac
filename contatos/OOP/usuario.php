@@ -18,5 +18,8 @@ class Usuario {
         return $ddd . $telefone;
     }
 
+    public function separaNome() {
+        
+    }
 }
 ?>
