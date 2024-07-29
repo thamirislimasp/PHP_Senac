@@ -4,10 +4,14 @@ $user = 'usuario_lista_compras';
 $password = 'Senha@123';
 
 try {
-    // https://www.php.net/manual/en/pdo.connections.php
     $dbh = new PDO($dsn, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_MODE, PDO::ERRM)
-    echo "Conectado ao banco de dados com sucesso!";
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    $sql = "SELECT * FROM lista_compras.itens_compra";
+    $stmt = $dbh->query($sql);
+
+    print_r($stmt);
+
 } catch(PDOException $e) {
     echo "Erro ao se conectar ao banco: <br>";
     echo $e;
