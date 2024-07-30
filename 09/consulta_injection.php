@@ -7,8 +7,10 @@ try {
     $dbh = new PDO($dsn, $user, $password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sql = "SELECT * FROM lista_compras.itens_compra";
-    $stmt = $dbh->query($sql);
+    $sql = "SELECT * FROM lista_compras.itens_compra WHERE nome_produto = :nome_produto";
+    $stmt = $dbh->prepare($sql);
+
+    $stmt->execute(['nome_produto' => 'Leite']);
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     

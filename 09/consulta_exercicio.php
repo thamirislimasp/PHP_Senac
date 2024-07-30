@@ -1,13 +1,13 @@
 <?php
-$dsn = 'mysql:host=localhost;dbname=lista_compras';
-$user = 'usuario_lista_compras';
-$password = 'Senha@123';
+$dsn = 'mysql:host=localhost;dbname=contatos';
+$user = 'root';
+$password = '';
 
 try {
     $dbh = new PDO($dsn, $user, $password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sql = "SELECT * FROM lista_compras.itens_compra";
+    $sql = "SELECT * FROM contatos.contatos_info";
     $stmt = $dbh->query($sql);
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
