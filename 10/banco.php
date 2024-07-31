@@ -41,7 +41,11 @@ function updateItem($id, $comprado) {
 
 //Função para excluir um item (Delete)
 function deleteItem($id) {
-
+    $pdo = connect();
+    $sql = "DELETE FROM itens_compra WHERE id = :id";
+    
+    $stmt = $pdo->prepare($sql);
+    return $stmt->execute(['id' => $id]);
 }
 
 ?>
